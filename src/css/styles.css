@@ -79,6 +79,7 @@ body {
   display: flex;
   width: 111rem;
   gap: 4.5rem;
+  margin: 2.4rem;
 }
 
 .introduction-section {
@@ -108,7 +109,7 @@ body {
 
 .form-section .featured-heading {
   background-color: var(--blue);
-  padding: 1.7rem;
+  padding: 1.7rem 6.7rem;
   border-radius: 1rem;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   font-size: 1.5rem;
@@ -210,7 +211,7 @@ body {
 
 
 
-/* Error */
+/* Error and Success */
 
 .form-section .form .form-control.error > input {
   border: 2px solid var(--red);
@@ -235,4 +236,35 @@ body {
 .form-section .form .form-control.success > input {
   border: 2px solid var(--green);
   color: var(--green);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    max-width: 54rem;
+    letter-spacing: -0.29px;
+    gap: 6.4rem;
+  }
+
+  .introduction-section {
+    gap: 2.7rem;
+  }
+
+  .introduction-section > h1 {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    text-align: center;
+  }
+  
+  .introduction-section > p {
+    line-height: 2.6rem;
+    text-align: center;
+  }
+
+  .form-section .form .terms {
+    text-align: center;
+    line-height: 2.1rem;
+  }
 }
