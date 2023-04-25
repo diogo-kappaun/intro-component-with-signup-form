@@ -118,6 +118,7 @@ body {
   text-align: center;
   line-height: 2.6rem;
   margin-bottom: 2.4rem;
+  cursor: default;
 }
 
 .form-section .form {
@@ -126,7 +127,7 @@ body {
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
-  padding: 4rem;
+  padding: 2rem 4rem;
 }
 
 .form-section .form .form-control {
@@ -147,6 +148,7 @@ body {
   color: var(--dark-blue);
   line-height: 2.4rem;
   border: 1px solid var(--light-grey);
+  margin-top: 2rem;
 }
 
 .form-section .form .form-control > input::placeholder {
@@ -160,9 +162,14 @@ body {
 }
 
 .form-section .form .form-control > img {
+  display: none;
   position: absolute;
   right: 27px;
-  top: 16px;
+  top: 36px;
+}
+
+.form-section .form .form-control > small {
+  display: none;
 }
 
 .form-section .form > button {
@@ -178,6 +185,12 @@ body {
   letter-spacing: 1px;
   padding: 1.5rem;
   text-align: center;
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+
+.form-section .form > button:hover {
+  background-color: var(--light-green);
 }
 
 .form-section .form .terms {
@@ -186,8 +199,40 @@ body {
   color: var(--grayish-blue);
   align-self: center;
   margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  cursor: default;
 }
 
 .form-section .form .terms > strong {
   color: var(--red);
+  cursor: pointer;
+}
+
+
+
+/* Error */
+
+.form-section .form .form-control.error > input {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.form-section .form .form-control.error > img {
+  display: block;
+}
+
+.form-section .form .form-control.error > small {
+  display: block;
+  color: var(--red);
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: italic;
+  align-self: flex-end;
+  margin-top: 0.6rem;
+  cursor: default;
+}
+
+.form-section .form .form-control.success > input {
+  border: 2px solid var(--green);
+  color: var(--green);
 }
